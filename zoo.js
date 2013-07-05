@@ -2,11 +2,62 @@
 // YOUR CODE: Create your Zoo "object literal" and Animal "constructor" and "prototypes" here.
 //------------------------------------------------------------------------------------------------------------------
 
+// Object constructor
+function Animal(name, legs){
+  this.name = name;
+  this.legs = legs;
+};
+
+Animal.prototype.identify = function(){
+  return "I am a " + this.name + " with " + this.legs + " legs.";
+}
+
+
+// Object literal
+var Zoo = {
+  init : function(animals){
+    this.animals = animals;
+  },
+
+  bipeds : function(){
+   return this.findAnimalsWithNumberOfLegs(2);
+  },
+
+ quadrupeds : function(){
+    var quadrapeds = [];
+
+    this.animals.forEach(function(animal) {
+      if(animal.legs === 4){
+        quadrapeds.push(animal);
+      }
+      
+    });
+
+    return quadrapeds;
+  },
+
+  findAnimalsWithNumberOfLegs : function(legsCount){
+    var quadrapeds = [];
+
+    this.animals.forEach(function(animal) {
+      if(animal.legs === legsCount){
+        quadrapeds.push(animal);
+      }
+      
+    });
+
+    return quadrapeds;
+  }
+
+};
+
 
 
 //------------------------------------------------------------------------------------------------------------------
 // DRIVER CODE: Do **NOT** change anything below this point. Your task is to implement code above to make this work.
 //------------------------------------------------------------------------------------------------------------------
+
+
 
 function assert(test, message) {  
   if (!test) {
