@@ -8,6 +8,6 @@ a thisVar, element, index, and array. Pretty powerful stuff.
 as is the case with the forEach call, which makes that function even more confusing.
 
 - Then there's something called strict mode, which depends on whether the thisArg value has been passed.
-- So it naturally takes a callback (which is the operation performed on each element)
-- 
+
+So it naturally takes a callback (which is the operation performed on each element).
 
