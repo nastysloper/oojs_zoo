@@ -5,4 +5,4 @@ oojs_zoo
 a thisVar, element, index, and array. Pretty powerful stuff.
 
 - The other thing with JavaScript is not seeing when you are passing a callback function as an argument,
-as is the case with the forEach call.
+as is the case with the forEach call, which makes that function even more confusing.
